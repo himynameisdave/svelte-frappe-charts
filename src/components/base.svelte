@@ -1,42 +1,54 @@
 <script>
-  // import { onMount, afterUpdate, onDestroy } from 'svelte';
-  import { onMount } from 'svelte';
+  import { onMount, afterUpdate, onDestroy } from 'svelte';
   import { Chart } from "frappe-charts/dist/frappe-charts.esm";
 
   /**
-   *  Expected frappe-charts data
+   *  PROPS
    */ 
+  //  Expected data
   export let data = {
     labels: [],
     datasets: [
-      {
-        values: [],
-      }
+      { values: [] }
     ],
+    yMarkers: {},
+    yRegions: [],
   };
+  export let type = 'line';
+  export let height = 300;
+  export let axisOptions = {};
+  export let barOptions = {};
+  export let lineOptions = {};
+  export let tooltipOptions = {};
+  export let colors = [];
+  export let valuesOverPoints = 0;
+  export let isNavigable = false;
 
+  /**
+   *  COMPONENT
+   */
   let chart = null;
 
   onMount(() => {
-    console.log('hello world!');
     chart = new Chart("#chart", {
-      data: data,
-      type: 'line',
-      height: 300,
-      axisOptions: {
-        xIsSeries: true,
-        xAxisMode: 'tick',
-      },
-      lineOptions: {
-        dotSize: 7,
-        spline: true,
-      },
-      tooltipOptions: {
-        formatTooltipY: d => d + 'km',
-      },
-      valuesOverPoints: 1,
-      colors: ['#6a9ae5']
+      data,
+      type,
+      height,
+      colors,
+      axisOptions,
+      barOptions,
+      lineOptions,
+      tooltipOptions,
+      valuesOverPoints,
+      isNavigable,
     });
+  });
+
+  //  Update the chart when incoming data changes
+  afterUpdate(() => chart.update(data));
+  //  Mark Chart references for garbage collection when component is unmounted
+  onDestroy(() => {
+    chart = null;
   });
 
 </script>
