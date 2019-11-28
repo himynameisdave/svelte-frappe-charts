@@ -27,10 +27,13 @@
   /**
    *  COMPONENT
    */
+  //  The Chart returned from frappe
   let chart = null;
+  //  DOM node for frappe to latch onto
+  let chartRef;
 
   onMount(() => {
-    chart = new Chart("#chart", {
+    chart = new Chart(chartRef, {
       data,
       type,
       height,
@@ -46,12 +49,12 @@
 
   //  Update the chart when incoming data changes
   afterUpdate(() => chart.update(data));
+  
   //  Mark Chart references for garbage collection when component is unmounted
   onDestroy(() => {
     chart = null;
   });
-
 </script>
 
 
-<div id="chart"></div>
+<div bind:this={chartRef}></div>
