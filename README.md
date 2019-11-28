@@ -1,5 +1,3 @@
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Fsvelte-frappe-charts.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhimynameisdave%2Fsvelte-frappe-charts?ref=badge_shield)
-
 <div align="center" margin="0 auto 20px">
   <h1>svelte-frappe-charts</h1>
   <p style="font-style: italic;">📈 Svelte bindings for <a href="https://frappe.io/charts">frappe-charts.</a></p>
@@ -64,7 +62,3 @@ The component API directly matches the [the configuration of `frappe-charts`](ht
 ---
 
 _✌️Created by [Dave](http://himynameisdave.com). Licenced under MIT._
-
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Fsvelte-frappe-charts.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhimynameisdave%2Fsvelte-frappe-charts?ref=badge_large)
