@@ -10,7 +10,7 @@ const name = pkg.name
 
 
 export default {
-  input: 'src/chart.svelte',
+  input: 'src/index.js',
 	output: [
 		{
       file: pkg.module,

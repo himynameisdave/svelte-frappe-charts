@@ -20,6 +20,7 @@
   },
   "module": "lib/index.mjs",
   "main": "lib/index.js",
+  "svelte": "src/index.js",
   "files": [
     "src",
     "index.mjs",
