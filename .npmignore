@@ -1,0 +1,4 @@
+node_modules/
+**__tests__/
+**__fixtures__/
+jest.config.js
