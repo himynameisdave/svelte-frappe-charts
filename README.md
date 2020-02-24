@@ -17,7 +17,7 @@
   </div>
 </div>
 
---- 
+---
 
 
 Makes it easy to use [frappe-charts](https://frappe.io/charts) in your [Svelte](https://svelte.dev/) project.
@@ -50,7 +50,7 @@ Use the chart in your Svelte project with ease:
   };
 </script>
 
-<Chart data={data} type="line">
+<Chart data={data} type="line" />
 ```
 
 The component API directly matches the [the configuration of `frappe-charts`](https://frappe.io/charts/docs/reference/configuration).
