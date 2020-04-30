@@ -22,3 +22,5 @@ lib/
 
 # Testing dir
 deleteable/
+
+*.DS_Store
