@@ -23,6 +23,13 @@
   export let colors = [];
   export let valuesOverPoints = 0;
   export let isNavigable = false;
+  export let maxSlices = 3;
+
+  export function exportChart() {
+    if (chart) {
+      chart.export();
+    }
+  }
 
   /**
    *  COMPONENT
@@ -44,6 +51,7 @@
       tooltipOptions,
       valuesOverPoints,
       isNavigable,
+      maxSlices,
     });
   });
 
