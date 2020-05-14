@@ -23,6 +23,7 @@
   export let colors = [];
   export let valuesOverPoints = 0;
   export let isNavigable = false;
+  export let maxSlices = 3;
 
   /**
    *  COMPONENT
@@ -44,6 +45,7 @@
       tooltipOptions,
       valuesOverPoints,
       isNavigable,
+      maxSlices,
     });
   });
 
