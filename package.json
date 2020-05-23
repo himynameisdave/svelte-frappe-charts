@@ -31,9 +31,8 @@
   "main": "lib/index.js",
   "svelte": "src/index.js",
   "files": [
-    "src",
-    "index.mjs",
-    "index.js"
+    "src/",
+    "lib/"
   ],
   "keywords": [
     "svelte",

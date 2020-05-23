@@ -1,4 +1,15 @@
 node_modules/
-**__tests__/
-**__fixtures__/
+**/__tests__/
+**/__fixtures__/
 jest.config.js
+
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.yarn-integrity
+package-lock.json
+.env
+deleteable/
+*.DS_Store
