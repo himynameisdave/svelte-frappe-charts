@@ -24,7 +24,12 @@
   export let valuesOverPoints = 0;
   export let isNavigable = false;
   export let maxSlices = 3;
-
+  export function exportChart() {
+    if (chart) {
+      chart.export();
+    }
+  }
+  
   /**
    *  COMPONENT
    */
