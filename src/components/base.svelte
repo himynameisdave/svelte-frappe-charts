@@ -5,7 +5,6 @@
   /**
    *  PROPS
    */ 
-  //  Expected data
   export let data = {
     labels: [],
     datasets: [
@@ -24,6 +23,7 @@
   export let valuesOverPoints = 0;
   export let isNavigable = false;
   export let maxSlices = 3;
+  //  Allow the consumer to export the chart
   export function exportChart() {
     if (chart) {
       chart.export();

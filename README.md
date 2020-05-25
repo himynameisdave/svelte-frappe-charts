@@ -55,6 +55,24 @@ Use the chart in your Svelte project with ease:
 
 The component API directly matches the [the configuration of `frappe-charts`](https://frappe.io/charts/docs/reference/configuration).
 
+### Exporting charts
+
+You can easily export a chart ([see Exporting](https://frappe.io/charts/docs/exporting/images)) as an SVG by storing a reference to the `<Chart />` component, and then calling `exportChart` on it:
+
+```jsx
+<script>
+  // ...
+
+  let chartRef;
+  const onExport = () => chartRef.exportChart();
+</script>
+
+<Chart data={data} type="line" bind:this={chartRef} />
+<button on:click={onExport}>
+  Export
+</button>
+```
+
 ### Contributing
 
 [Issues](https://github.com/himynameisdave/svelte-frappe-charts/issues/new) and pull requests are greatly welcome!
