@@ -5,14 +5,14 @@
     <a href='https://travis-ci.org/himynameisdave/svelte-frappe-charts'>
         <img src="https://api.travis-ci.org/himynameisdave/svelte-frappe-charts.svg?branch=master" alt="Travis Badge" />
     </a>
-    <a href="https://bundlephobia.com/result?p=svelte-frappe-charts">
-        <img src="https://img.shields.io/bundlephobia/min/svelte-frappe-charts.svg" alt="Bundle size (minified)" />
+    <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fhimynameisdave%2Fsvelte-frappe-charts?ref=badge_shield" alt="FOSSA Status">
+      <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Fsvelte-frappe-charts.svg?type=shield"/>
     </a>
     <a href="https://www.npmjs.com/package/svelte-frappe-charts">
         <img src="https://img.shields.io/npm/dm/svelte-frappe-charts.svg" alt="Downloads">
     </a>
-    <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fhimynameisdave%2Fsvelte-frappe-charts?ref=badge_shield" alt="FOSSA Status">
-      <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Fsvelte-frappe-charts.svg?type=shield"/>
+    <a title="MadeWithSvelte.com Shield" href="https://madewithsvelte.com/p/svelte-frappe-charts/shield-link">
+      <img src="https://madewithsvelte.com/storage/repo-shields/2274-shield.svg" />
     </a>
   </div>
 </div>
