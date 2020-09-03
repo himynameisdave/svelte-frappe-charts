@@ -1,6 +1,6 @@
 node_modules/
-**/__tests__/
-**/__fixtures__/
+src/__tests__/**/*
+src/__fixtures__/**/*
 jest.config.js
 
 logs
