@@ -1,6 +1,6 @@
 {
   "name": "svelte-frappe-charts",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "📈 Svelte bindings for frappe-charts",
   "scripts": {
     "build": "rollup -c",
