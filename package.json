@@ -32,6 +32,8 @@
   "svelte": "src/index.js",
   "files": [
     "src/",
+    "!src/__tests__/**/*",
+    "!src/__fixtures__/**/*",
     "lib/"
   ],
   "keywords": [
