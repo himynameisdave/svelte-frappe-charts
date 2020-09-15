@@ -36,7 +36,7 @@ npm i -S svelte svelte-frappe-charts
 
 Use the chart in your Svelte project with ease:
 
-```jsx
+```svelte
 <script>
   import Chart from 'svelte-frappe-charts';
 
@@ -55,11 +55,115 @@ Use the chart in your Svelte project with ease:
 
 The component API directly matches the [the configuration of `frappe-charts`](https://frappe.io/charts/docs/reference/configuration).
 
+### Updating data
+
+There are two ways to update data in a chart: either in adding and removing individual points, or updating the existing data with an entirely new set of data points.
+
+#### Updating individual data points
+
+##### addDataPoint
+
+Add a data point to the chart, increasing the length of the dataset.
+
+```svelte
+<script>
+  import Chart from 'svelte-frappe-charts';
+
+  let data = {
+    labels: ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
+    datasets: [
+      {
+        values: [10, 12, 3, 9, 8, 15, 9]
+      }
+    ]
+  };
+
+  let chartRef;
+
+  function addDataPoint() {
+    chartRef.addDataPoint('Wed', [30], 1);
+  }
+</script>
+
+<Chart data={data} type="line" bind:this={chartRef} />
+
+<button on:click={addDataPoint}>Add data point</button>
+```
+
+[More info on `addDataPoint`.](https://frappe.io/charts/docs/reference/api#adddatapoint)
+
+##### removeDataPoint
+
+Remove a data point from the chart, reducing the length of the dataset.
+
+```svelte
+<script>
+  import Chart from 'svelte-frappe-charts';
+
+  let data = {
+    labels: ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
+    datasets: [
+      {
+        values: [10, 12, 3, 9, 8, 15, 9]
+      }
+    ]
+  };
+
+  let chartRef;
+
+  function removeDataPoint() {
+    chartRef.removeDataPoint(3); // Index of the item to remove
+  }
+</script>
+
+<Chart data={data} type="line" bind:this={chartRef} />
+
+<button on:click={removeDataPoint}>Remove data point</button>
+```
+
+[More info on `removeDataPoint`.](https://frappe.io/charts/docs/reference/api#removedatapoint)
+
+#### Updating full data
+
+Update the entire data, including annotations, by passing the entire new data object to update.
+
+```svelte
+<script>
+  import Chart from 'svelte-frappe-charts';
+
+  let data = {
+    labels: ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'],
+    datasets: [
+      {
+        values: [10, 12, 3, 9, 8, 15, 9]
+      }
+    ]
+  };
+
+  let chartRef;
+
+  function updateData() {
+    data = {
+      labels: ['Friday', 'Saturday', 'Sunday'],
+      datasets: [
+        {
+          values: [300, 380, 275]
+        }
+      ]
+    };
+  }
+</script>
+
+<Chart data={data} type="line" bind:this={chartRef} />
+
+<button on:click={updateData}>Update Chart</button>
+```
+
 ### Exporting charts
 
 You can easily export a chart ([see Exporting](https://frappe.io/charts/docs/exporting/images)) as an SVG by storing a reference to the `<Chart />` component, and then calling `exportChart` on it:
 
-```jsx
+```svelte
 <script>
   // ...
 
