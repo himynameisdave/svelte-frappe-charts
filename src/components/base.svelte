@@ -2,7 +2,6 @@
   import { onMount, afterUpdate, onDestroy } from 'svelte';
   import { Chart } from 'frappe-charts/dist/frappe-charts.min.cjs.js';
 
-
   /**
    *  PROPS
    */ 
@@ -30,7 +29,19 @@
       chart.export();
     }
   }
-  
+  //  Allow the consumer to add a data point
+  export function addDataPoint(label, valueFromEachDataset, index) {
+    if (chart) {
+      chart.addDataPoint(label, valueFromEachDataset, index);
+    }
+  }
+  //  Allow the consumer to remove a data point
+  export function removeDataPoint(index) {
+    if (chart) {
+      chart.removeDataPoint(index);
+    }
+  }
+
   /**
    *  COMPONENT
    */
