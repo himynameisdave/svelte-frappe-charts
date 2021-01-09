@@ -4,7 +4,7 @@
 
   /**
    *  PROPS
-   */ 
+   */
   export let data = {
     labels: [],
     datasets: [
@@ -13,6 +13,7 @@
     yMarkers: {},
     yRegions: [],
   };
+  export let title = '';
   export let type = 'line';
   export let height = 300;
   export let axisOptions = {};
@@ -54,11 +55,12 @@
   export const exportChart = ifChartThen(() => chart.export());
 
   /**
-   *  Handle initializing the chart when this Svelte component mounts 
+   *  Handle initializing the chart when this Svelte component mounts
    */
   onMount(() => {
     chart = new Chart(chartRef, {
       data,
+      title,
       type,
       height,
       colors,
@@ -74,7 +76,7 @@
 
   //  Update the chart when incoming data changes
   afterUpdate(() => chart.update(data));
-  
+
   //  Mark Chart references for garbage collection when component is unmounted
   onDestroy(() => {
     chart = null;
