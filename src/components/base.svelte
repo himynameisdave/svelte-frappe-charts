@@ -16,6 +16,7 @@
   export let title = '';
   export let type = 'line';
   export let height = 300;
+  export let animate = true;
   export let axisOptions = {};
   export let barOptions = {};
   export let lineOptions = {};
@@ -63,6 +64,7 @@
       title,
       type,
       height,
+      animate,
       colors,
       axisOptions,
       barOptions,
