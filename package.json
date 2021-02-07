@@ -11,18 +11,18 @@
   },
   "dependencies": {
     "frappe-charts": "^1.5.6",
-    "svelte": "^3.31.2"
+    "svelte": "^3.32.1"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.8",
+    "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/svelte": "^3.0.3",
     "jest": "^26.6.3",
     "jest-transform-svelte": "^2.1.1",
-    "np": "^7.2.0",
-    "rollup": "^2.36.1",
+    "np": "^7.3.0",
+    "rollup": "^2.38.5",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-svelte": "^7.0.0"
+    "rollup-plugin-svelte": "^7.1.0"
   },
   "peerDependencies": {
     "svelte": "^3.0.0"
