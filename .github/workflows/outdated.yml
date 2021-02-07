@@ -1,0 +1,21 @@
+name: outdated
+on:
+  schedule:
+    - cron:  '0 23 * * 0' # Once a week, Sundays at 11:00PM UTC (3PM PST)
+env:
+  CI: true
+jobs:
+  outdated:
+    name: "Checking for outdated dependencies"
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Install
+        run: yarn install
+      - name: YOD
+        run: yarn test:od
