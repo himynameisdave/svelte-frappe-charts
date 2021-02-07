@@ -2,8 +2,11 @@
   <h1>svelte-frappe-charts</h1>
   <p style="font-style: italic;">📈 Svelte bindings for <a href="https://frappe.io/charts">frappe-charts.</a></p>
   <div>
-    <a href='https://travis-ci.org/himynameisdave/svelte-frappe-charts'>
-        <img src="https://api.travis-ci.org/himynameisdave/svelte-frappe-charts.svg?branch=master" alt="Travis Badge" />
+    <a href='https://github.com/himynameisdave/svelte-frappe-charts/actions?query=workflow%3Atest+branch%3Amain'>
+      <img src="https://github.com/himynameisdave/svelte-frappe-charts/workflows/test/badge.svg" alt="GitHub Actions - Test Workflow Badge" />
+    </a>
+    <a href='https://github.com/himynameisdave/svelte-frappe-charts/actions?query=workflow%3Aoutdated+branch%3Amain'>
+      <img src="https://github.com/himynameisdave/svelte-frappe-charts/workflows/outdated/badge.svg" alt="GitHub Actions - Test Workflow Badge" />
     </a>
     <a href="https://app.fossa.io/projects/git%2Bgithub.com%2Fhimynameisdave%2Fsvelte-frappe-charts?ref=badge_shield" alt="FOSSA Status">
       <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Fsvelte-frappe-charts.svg?type=shield"/>
