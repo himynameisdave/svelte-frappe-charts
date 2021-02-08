@@ -164,7 +164,7 @@ Update the entire data, including annotations, by passing the entire new data ob
 ### Chart navigation
 
 [Chart navigation](https://frappe.io/charts/docs/update_state/navigation) can be used when the `isNavigable` prop is set on the `Chart` component.
-Once it is set, the `data-select` event is propagated and can be handled in Svelte's standard ways.
+Once it is set, the `data-select` event is propagated and can be handled in Svelte's standard ways (see the Events section of the tutorial and examples, and [the API docs](https://svelte.dev/docs#on_component_event)).
 
 ```svelte
 <script>
