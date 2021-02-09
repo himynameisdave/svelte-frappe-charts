@@ -161,6 +161,32 @@ Update the entire data, including annotations, by passing the entire new data ob
 
 <button on:click={updateData}>Update Chart</button>
 ```
+### Chart navigation
+
+[Chart navigation](https://frappe.io/charts/docs/update_state/navigation) can be used when the `isNavigable` prop is set on the `Chart` component.
+Once it is set, the `data-select` event is propagated and can be handled in Svelte's standard ways (see the Events section of the tutorial and examples, and [the API docs](https://svelte.dev/docs#on_component_event)).
+
+```svelte
+<script>
+	import Chart from "svelte-frappe-charts";
+
+	let data = {
+		labels: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon" ],
+		datasets: [
+			{ values: [ 300, 250, 720, 560, 370, 610, 690, 410, 370, 480, 620, 260, 170, 510, 630, 710 ] },
+		],
+	};
+  
+	const onDataSelect = (event) => {
+		console.log("Data select event fired!", event);
+		selected = event;
+	};
+	let selected;
+</script>
+
+<h1>Svelte Frappe charts navigation demo</h1>
+<Chart {data} on:data-select={onDataSelect} isNavigable type="bar" />
+```
 
 ### Exporting charts
 
