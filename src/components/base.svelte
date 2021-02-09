@@ -86,4 +86,7 @@
 </script>
 
 
-<div bind:this={chartRef} on:data-select></div>
+<div
+  bind:this={chartRef}
+  on:data-select
+></div>

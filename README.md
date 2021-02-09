@@ -93,7 +93,7 @@ Add a data point to the chart, increasing the length of the dataset.
 <button on:click={addDataPoint}>Add data point</button>
 ```
 
-[More info on `addDataPoint`.](https://frappe.io/charts/docs/reference/api#adddatapoint)
+[More info on `addDataPoint`](https://frappe.io/charts/docs/reference/api#adddatapoint).
 
 ##### removeDataPoint
 
@@ -124,7 +124,7 @@ Remove a data point from the chart, reducing the length of the dataset.
 <button on:click={removeDataPoint}>Remove data point</button>
 ```
 
-[More info on `removeDataPoint`.](https://frappe.io/charts/docs/reference/api#removedatapoint)
+[More info on `removeDataPoint`](https://frappe.io/charts/docs/reference/api#removedatapoint).
 
 #### Updating full data
 
@@ -161,6 +161,7 @@ Update the entire data, including annotations, by passing the entire new data ob
 
 <button on:click={updateData}>Update Chart</button>
 ```
+
 ### Chart navigation
 
 [Chart navigation](https://frappe.io/charts/docs/update_state/navigation) can be used when the `isNavigable` prop is set on the `Chart` component.
@@ -176,7 +177,7 @@ Once it is set, the `data-select` event is propagated and can be handled in Svel
 			{ values: [ 300, 250, 720, 560, 370, 610, 690, 410, 370, 480, 620, 260, 170, 510, 630, 710 ] },
 		],
 	};
-  
+
 	const onDataSelect = (event) => {
 		console.log("Data select event fired!", event);
 		selected = event;

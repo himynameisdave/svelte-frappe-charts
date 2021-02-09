@@ -1,7 +1,7 @@
 name: outdated
 on:
   schedule:
-    - cron:  '0 23 * * 0' # Once a week, Sundays at 11:00PM UTC (3PM PST)
+    - cron:  '0 5 * * 2' # Once a week, Tues at 5:00PM UTC (9PM PST Mon)
 env:
   CI: true
 jobs:
