@@ -1,6 +1,8 @@
 <script>
   import { onMount, afterUpdate, onDestroy } from 'svelte';
-  import { Chart } from 'frappe-charts/dist/frappe-charts.min.cjs.js';
+  import { Chart } from 'frappe-charts/dist/frappe-charts.esm.js'
+  // import css
+  import 'frappe-charts/dist/frappe-charts.min.css'
 
   /**
    *  PROPS
