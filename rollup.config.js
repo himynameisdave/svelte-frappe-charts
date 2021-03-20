@@ -26,7 +26,6 @@ export default {
   plugins: [
     svelte(),
     resolve({
-      browser: true,
       dedupe: ['svelte']
     }),
     commonjs()
