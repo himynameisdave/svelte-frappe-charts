@@ -169,20 +169,20 @@ Once it is set, the `data-select` event is propagated and can be handled in Svel
 
 ```svelte
 <script>
-	import Chart from "svelte-frappe-charts";
+  import Chart from "svelte-frappe-charts";
 
-	let data = {
-		labels: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon" ],
-		datasets: [
-			{ values: [ 300, 250, 720, 560, 370, 610, 690, 410, 370, 480, 620, 260, 170, 510, 630, 710 ] },
-		],
-	};
+  let data = {
+    labels: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "Mon" ],
+    datasets: [
+      { values: [ 300, 250, 720, 560, 370, 610, 690, 410, 370, 480, 620, 260, 170, 510, 630, 710 ] },
+    ],
+  };
 
-	const onDataSelect = (event) => {
-		console.log("Data select event fired!", event);
-		selected = event;
-	};
-	let selected;
+  const onDataSelect = (event) => {
+    console.log("Data select event fired!", event);
+    selected = event;
+  };
+  let selected;
 </script>
 
 <h1>Svelte Frappe charts navigation demo</h1>
