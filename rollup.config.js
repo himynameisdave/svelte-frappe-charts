@@ -1,6 +1,6 @@
 import svelte from 'rollup-plugin-svelte';
-import commonjs from 'rollup-plugin-commonjs';
-import resolve from 'rollup-plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
 import pkg from './package.json';
 
 
@@ -12,20 +12,23 @@ const name = pkg.name
 
 export default {
   input: 'src/index.js',
-	output: [
-		{
+  output: [
+    {
       file: pkg.module,
       'format': 'es'
     },
-		{
+    {
       file: pkg.main,
       'format': 'umd',
       name
     }
-	],
-	plugins: [
-		svelte(),
-    resolve(),
+  ],
+  plugins: [
+    svelte(),
+    resolve({
+      browser: true,
+      dedupe: ['svelte']
+    }),
     commonjs()
-	]
+  ]
 };
