@@ -726,10 +726,10 @@
     dom-accessibility-api "^0.3.0"
     pretty-format "^25.1.0"
 
-"@testing-library/jest-dom@^5.11.10":
-  version "5.11.10"
-  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.11.10.tgz#1cd90715023e1627f5ed26ab3b38e6f22d77046c"
-  integrity sha512-FuKiq5xuk44Fqm0000Z9w0hjOdwZRNzgx7xGGxQYepWFZy+OYUMOT/wPI4nLYXCaVltNVpU1W/qmD88wLWDsqQ==
+"@testing-library/jest-dom@^5.12.0":
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/@testing-library/jest-dom/-/jest-dom-5.12.0.tgz#6a5d340b092c44b7bce17a4791b47d9bc2c61443"
+  integrity sha512-N9Y82b2Z3j6wzIoAqajlKVF1Zt7sOH0pPee0sUHXHc5cv2Fdn23r+vpWm0MBBoGJtPOly5+Bdx1lnc3CD+A+ow==
   dependencies:
     "@babel/runtime" "^7.9.2"
     "@types/testing-library__jest-dom" "^5.9.1"
@@ -2302,10 +2302,10 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
-frappe-charts@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/frappe-charts/-/frappe-charts-1.6.0.tgz#ce7ebeef7a0e737e5abb1d0b1ca7974c30a87a32"
-  integrity sha512-oqlpfnQxAde436XPdenNCnSKrHttYfxbFzgGA+3DGDHXPAJmy01wtAreG8hW6q+8rG+qniQ2IeToVxMdLdp+sA==
+frappe-charts@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/frappe-charts/-/frappe-charts-1.6.1.tgz#2162cec05f4524b10cf232df8787a3ac20218384"
+  integrity sha512-Fteae/oqv4XdxP4ALoqTmUBBvXt8ECtghziqabp1ZA4yLqY8a3haafNqluwUCxnBOvrV+EdpvhZu0H+VEebX1Q==
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -4830,10 +4830,10 @@ rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^2.45.1:
-  version "2.45.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.45.1.tgz#eae2b94dc2088b4e0a3b7197a5a1ee0bdd589d5c"
-  integrity sha512-vPD+JoDj3CY8k6m1bLcAFttXMe78P4CMxoau0iLVS60+S9kLsv2379xaGy4NgYWu+h2WTlucpoLPAoUoixFBag==
+rollup@^2.45.2:
+  version "2.45.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.45.2.tgz#8fb85917c9f35605720e92328f3ccbfba6f78b48"
+  integrity sha512-kRRU7wXzFHUzBIv0GfoFFIN3m9oteY4uAsKllIpQDId5cfnkWF2J130l+27dzDju0E6MScKiV0ZM5Bw8m4blYQ==
   optionalDependencies:
     fsevents "~2.3.1"
 
