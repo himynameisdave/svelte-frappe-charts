@@ -1,4 +1,5 @@
 module.exports = {
+  testEnvironment: 'jsdom',
   transform: {
     '^.+\\.svelte$': 'jest-transform-svelte'
   },
