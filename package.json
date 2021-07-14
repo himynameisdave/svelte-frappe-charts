@@ -10,18 +10,18 @@
     "release": "np --no-yarn"
   },
   "dependencies": {
-    "frappe-charts": "^1.6.1",
-    "svelte": "^3.38.2"
+    "frappe-charts": "^1.6.2",
+    "svelte": "^3.38.3"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
-    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/svelte": "^3.0.3",
-    "jest": "^27.0.4",
+    "jest": "^27.0.6",
     "jest-transform-svelte": "^2.1.1",
     "np": "^7.5.0",
-    "rollup": "^2.51.0",
+    "rollup": "^2.53.1",
     "rollup-plugin-svelte": "^7.1.0"
   },
   "peerDependencies": {
