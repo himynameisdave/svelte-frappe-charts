@@ -1,5 +1,5 @@
 <script>
-  import { onMount, afterUpdate, onDestroy } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
   import { Chart } from 'frappe-charts';
 
   /**
@@ -55,6 +55,10 @@
   //  Allow the consumer to export the chart
   export const exportChart = ifChartThen(() => chart.export());
 
+  //  Update the chart when incoming data changes
+  const updateChart = ifChartThen((newData) => chart.update(newData));
+  $: updateChart(data);
+
   /**
    *  Handle initializing the chart when this Svelte component mounts
    */
@@ -75,9 +79,6 @@
       maxSlices,
     });
   });
-
-  //  Update the chart when incoming data changes
-  afterUpdate(() => chart.update(data));
 
   //  Mark Chart references for garbage collection when component is unmounted
   onDestroy(() => {
