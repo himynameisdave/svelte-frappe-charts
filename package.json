@@ -19,6 +19,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/svelte": "^3.1.1",
     "jest": "^28.0.3",
+    "jest-environment-jsdom": "^28.0.2",
     "jest-transform-svelte": "^2.1.1",
     "np": "^7.6.1",
     "rollup": "^2.71.1",
