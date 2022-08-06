@@ -12,12 +12,12 @@ declare module "frappe-charts" {
 
 type ChartOptions = {
     data: Data,
-    title: string = ""
-    type: ChartType = "line"
+    title: string
+    type: ChartType
     colors: string[]
-    height: number = 240
-    animate: boolean = true
-    truncateLegends: boolean = false
+    height: number
+    animate: boolean
+    truncateLegends: boolean
     axisOptions: AxisOptions
     tooltipOptions: TooltipOptions
     barOptions: BarOptions
@@ -30,9 +30,9 @@ type ChartOptions = {
 type ChartType = "line" | "bar" | "axis-mixed" | "pie" | "percentage" | "heatmap"
 
 type AxisOptions = {
-    xAxisMode?: AxisMode = "span"
-    yAxisMode?: AxisMode = "span"
-    xIsSeries?: boolean = false
+    xAxisMode?: AxisMode
+    yAxisMode?: AxisMode
+    xIsSeries?: boolean
 }
 
 type AxisMode = "span" | "tick"
@@ -48,19 +48,19 @@ type BarOptions = {
 }
 
 type LineOptions = {
-    heatLine?: boolean = false
-    hideLine?: boolean = false
-    dotSize?: number = 4
-    hideDots?: boolean = false
-    regionFill?: number = 0
-    spline?: boolean = false
+    heatLine?: boolean
+    hideLine?: boolean
+    dotSize?: number
+    hideDots?: boolean
+    regionFill?: boolean
+    spline?: boolean
 }
 
 type Data = {
     labels: string[],
     datasets: Dataset[]
 
-    chartType: "line" | "bar" | "axis-mixed" | "pie" | "percentage" | "heatmap"
+    chartType?: ChartType
 
     yMarkers?: { label: string, value: number }[],
     yRegions?: { label: string, start: number, end: number }[]
@@ -68,5 +68,5 @@ type Data = {
 
 type Dataset = {
     name?: string,
-    value: number[]
+    values: number[]
 }
