@@ -2,7 +2,7 @@ import svelte from 'rollup-plugin-svelte';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import pkg from './package.json';
-
+import typescript from '@rollup/plugin-typescript';
 
 const name = pkg.name
   // .replace(/^(@\S+\/)?(svelte-)?(\S+)/, '$3')
@@ -28,6 +28,7 @@ export default {
     resolve({
       dedupe: ['svelte']
     }),
-    commonjs()
+    commonjs(),
+    typescript()
   ]
 };
