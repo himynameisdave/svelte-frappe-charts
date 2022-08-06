@@ -1,0 +1,15 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "include": ["src/**/*", "**/*.config.js"],
+  "exclude": ["node_modules/*"],
+  "compilerOptions": {
+    "outDir": "lib",
+    "declaration": true,
+    "baseUrl": "./",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@components/*": ["src/components/*"]
+    }
+  }
+}

@@ -1,42 +1,35 @@
-<script>
+<script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   import { Chart } from 'frappe-charts';
 
   /**
    *  PROPS
    */
-  export let data = {
-    labels: [],
-    datasets: [
-      { values: [] }
-    ],
-    yMarkers: {},
-    yRegions: [],
-  };
-  export let title = '';
-  export let type = 'line';
-  export let height = 300;
-  export let animate = true;
-  export let axisOptions = {};
-  export let barOptions = {};
-  export let lineOptions = {};
-  export let tooltipOptions = {};
-  export let colors = [];
-  export let valuesOverPoints = 0;
-  export let isNavigable = false;
-  export let maxSlices = 3;
+  export let data: Data;
+  export let title: string = '';
+  export let type: ChartType = 'line';
+  export let height: number = 300;
+  export let animate: boolean = true;
+  export let axisOptions: AxisOptions = {};
+  export let barOptions: BarOptions = {};
+  export let lineOptions: LineOptions = {};
+  export let tooltipOptions: TooltipOptions = {};
+  export let colors: string[] = [];
+  export let valuesOverPoints: boolean = false;
+  export let isNavigable: boolean = false;
+  export let maxSlices: number = 3;
 
   /**
    *  COMPONENT
    */
   //  The Chart returned from frappe
-  let chart = null;
+  let chart: Chart | null = null;
   //  DOM node for frappe to latch onto
-  let chartRef;
+  let chartRef: HTMLElement;
 
   //  Helper HOF for calling a fn only if chart exists
-  function ifChartThen(fn) {
-    return function ifChart(...args) {
+  function ifChartThen(fn: Function) {
+    return function ifChart(...args: any[]) {
       if (chart) {
         return fn(...args);
       }
@@ -47,16 +40,16 @@
    * Methods for updating / exporting the chart
    */
   //  Allow the consumer to add a data point
-  export const addDataPoint = ifChartThen((label, valueFromEachDataset, index) => chart.addDataPoint(label, valueFromEachDataset, index));
+  export const addDataPoint = ifChartThen((label: string, valueFromEachDataset: number[], index: number) => chart?.addDataPoint(label, valueFromEachDataset, index));
 
   //  Allow the consumer to remove a data point
-  export const removeDataPoint = ifChartThen(index => chart.removeDataPoint(index));
+  export const removeDataPoint = ifChartThen((index: number) => chart?.removeDataPoint(index));
 
   //  Allow the consumer to export the chart
-  export const exportChart = ifChartThen(() => chart.export());
+  export const exportChart = ifChartThen(() => chart?.export());
 
   //  Update the chart when incoming data changes
-  const updateChart = ifChartThen((newData) => chart.update(newData));
+  const updateChart = ifChartThen((newData: Data) => chart?.update(newData));
   $: updateChart(data);
 
   /**
@@ -77,7 +70,7 @@
       valuesOverPoints,
       isNavigable,
       maxSlices,
-    });
+    } as ChartOptions);
   });
 
   //  Mark Chart references for garbage collection when component is unmounted
