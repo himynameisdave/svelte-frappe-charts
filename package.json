@@ -3,7 +3,7 @@
   "version": "1.9.2",
   "description": "📈 Svelte bindings for frappe-charts",
   "scripts": {
-    "build": "rollup -c --bundleConfigAsCjs",
+    "build": "rollup -c -m --bundleConfigAsCjs",
     "prepublishOnly": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
