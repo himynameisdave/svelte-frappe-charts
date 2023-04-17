@@ -25,6 +25,8 @@
   export let valuesOverPoints = 0;
   export let isNavigable = false;
   export let maxSlices = 3;
+  export let radius = 0;
+  export let discreteDomains = 1;
 
   /**
    *  COMPONENT
@@ -77,6 +79,8 @@
       valuesOverPoints,
       isNavigable,
       maxSlices,
+      radius,
+      discreteDomains
     });
   });
 
