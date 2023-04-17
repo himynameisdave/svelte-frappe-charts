@@ -1,18 +1,20 @@
 <script>
-  import { onMount, onDestroy } from "svelte";
-  import { Chart } from "frappe-charts";
+  import { onMount, onDestroy } from 'svelte';
+  import { Chart } from 'frappe-charts';
 
   /**
    *  PROPS
    */
   export let data = {
     labels: [],
-    datasets: [{ values: [] }],
+    datasets: [
+      { values: [] }
+    ],
     yMarkers: {},
     yRegions: [],
   };
-  export let title = "";
-  export let type = "line";
+  export let title = '';
+  export let type = 'line';
   export let height = 300;
   export let animate = true;
   export let axisOptions = {};
@@ -40,22 +42,17 @@
       if (chart) {
         return fn(...args);
       }
-    };
+    }
   }
 
   /**
    * Methods for updating / exporting the chart
    */
   //  Allow the consumer to add a data point
-  export const addDataPoint = ifChartThen(
-    (label, valueFromEachDataset, index) =>
-      chart.addDataPoint(label, valueFromEachDataset, index)
-  );
+  export const addDataPoint = ifChartThen((label, valueFromEachDataset, index) => chart.addDataPoint(label, valueFromEachDataset, index));
 
   //  Allow the consumer to remove a data point
-  export const removeDataPoint = ifChartThen((index) =>
-    chart.removeDataPoint(index)
-  );
+  export const removeDataPoint = ifChartThen(index => chart.removeDataPoint(index));
 
   //  Allow the consumer to export the chart
   export const exportChart = ifChartThen(() => chart.export());
@@ -83,7 +80,7 @@
       isNavigable,
       maxSlices,
       radius,
-      discreteDomains,
+      discreteDomains
     });
   });
 
@@ -93,4 +90,8 @@
   });
 </script>
 
-<div bind:this={chartRef} on:data-select />
+
+<div
+  bind:this={chartRef}
+  on:data-select
+></div>
