@@ -15,15 +15,15 @@
     "svelte": "^4.2.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/svelte": "^4.1.0",
     "@vitest/ui": "^1.4.0",
     "jsdom": "^24.0.0",
-    "np": "^7.6.2",
-    "rollup": "^3.4.0",
+    "np": "^10.0.2",
+    "rollup": "^4.13.2",
     "rollup-plugin-svelte": "^7.1.0",
     "vitest": "^1.4.0"
   },
