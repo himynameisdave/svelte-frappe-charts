@@ -28,7 +28,7 @@
     "vitest": "^1.4.0"
   },
   "peerDependencies": {
-    "svelte": "^3.0.0"
+    "svelte": "^4.0.0"
   },
   "module": "lib/index.mjs",
   "type": "module",
