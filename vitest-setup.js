@@ -13,5 +13,4 @@ vi.stubGlobal('ResizeObserver', ResizeObserverMock);
 
 beforeEach(() => {
   cleanup();
-  console.log('dada');
 })
