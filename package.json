@@ -30,7 +30,11 @@
   },
   "module": "lib/index.mjs",
   "main": "lib/index.js",
-  "svelte": "src/index.js",
+  "exports": {
+    ".": {
+      "svelte": "src/index.js",
+    }   
+  },
   "files": [
     "src/",
     "!src/__tests__/**/*",
