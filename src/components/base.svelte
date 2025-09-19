@@ -30,6 +30,8 @@
   export let valuesOverPoints: number = 0;
   export let isNavigable: boolean = false;
   export let maxSlices: number = 3;
+  export let radius: number = 0;
+  export let discreteDomains: number = 1;
 
   // Event handler prop for Svelte 5 compatibility
   export let ondataselect: ((event: CustomEvent) => void) | undefined = undefined;
@@ -87,6 +89,8 @@
       valuesOverPoints,
       isNavigable,
       maxSlices,
+      radius,
+      discreteDomains,
     });
   });
 
