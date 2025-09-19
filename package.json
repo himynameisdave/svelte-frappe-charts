@@ -4,11 +4,11 @@
   "description": "📈 Svelte bindings for frappe-charts",
   "type": "module",
   "scripts": {
-    "build": "rollup -c -m --bundleConfigAsCjs",
-    "prepublishOnly": "npm run build",
+    "build": "rollup -c --bundleConfigAsCjs",
+    "prepublishOnly": "pnpm run build",
     "test": "vitest run",
     "test:watch": "vitest",
-    "release": "np --no-yarn"
+    "release": "np"
   },
   "dependencies": {
     "frappe-charts": "^1.6.2"
@@ -50,7 +50,8 @@
     "src/",
     "!src/__tests__/**/*",
     "!src/__fixtures__/**/*",
-    "lib/"
+    "lib/",
+    "!lib/**/*.map"
   ],
   "keywords": [
     "svelte",

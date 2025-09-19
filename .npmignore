@@ -12,9 +12,8 @@ setupTests.js
 *.code-workspace
 
 # Development dependencies
-yarn.lock
-yarn-error.log*
-.yarn-integrity
+pnpm-lock.yaml
+.pnpm-debug.log*
 
 # Testing and coverage
 coverage/

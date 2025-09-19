@@ -40,7 +40,7 @@ export default {
     }),
     commonjs(),
     typescript({
-      sourceMap: true,
+      sourceMap: false,
       tsconfig: './tsconfig.json'
     })
   ]
