@@ -10,23 +10,24 @@
     "release": "np --no-yarn"
   },
   "dependencies": {
-    "frappe-charts": "^1.6.2",
-    "svelte": "3.59.2"
+    "frappe-charts": "^1.6.2"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "28.0.6",
-    "@rollup/plugin-node-resolve": "16.0.1",
-    "@sveltejs/vite-plugin-svelte": "^1.4.0",
-    "@testing-library/svelte": "3.2.2",
-    "@vitest/ui": "^2.1.8",
-    "jsdom": "^25.0.1",
-    "np": "10.2.0",
-    "rollup": "4.51.0",
-    "rollup-plugin-svelte": "7.2.3",
-    "vitest": "^2.1.8"
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@sveltejs/vite-plugin-svelte": "^6.2.0",
+    "@testing-library/svelte": "^5.2.3",
+    "@vitest/ui": "^3.2.4",
+    "jsdom": "^27.0.0",
+    "np": "^10.2.0",
+    "rollup": "^4.51.0",
+    "rollup-plugin-svelte": "^7.2.3",
+    "svelte": "^5.39.2",
+    "vite": "^7.1.6",
+    "vitest": "^3.2.4"
   },
   "peerDependencies": {
-    "svelte": "^3.0.0"
+    "svelte": "^4.0.0 || ^5.0.0"
   },
   "module": "lib/index.mjs",
   "main": "lib/index.js",

@@ -26,6 +26,9 @@
   export let isNavigable = false;
   export let maxSlices = 3;
 
+  // Event handler prop for Svelte 5 compatibility
+  export let ondataselect = undefined;
+
   /**
    *  COMPONENT
    */
@@ -89,5 +92,5 @@
 
 <div
   bind:this={chartRef}
-  on:data-select
+  ondataselect={ondataselect}
 ></div>
