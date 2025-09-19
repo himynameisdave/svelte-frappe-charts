@@ -33,7 +33,7 @@ yarn add svelte svelte-frappe-charts
 npm i -S svelte svelte-frappe-charts
 ```
 
-> **Note**: Assumes you are using `>= svelte@3.0.0`.
+> **Note**: Assumes you are using `>= svelte@4.0.0`.
 
 ### Usage
 
