@@ -32,8 +32,8 @@
   "main": "lib/index.js",
   "exports": {
     ".": {
-      "svelte": "src/index.js",
-    }   
+      "svelte": "src/index.js"
+    }
   },
   "files": [
     "src/",
