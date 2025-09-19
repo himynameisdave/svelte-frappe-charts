@@ -1,15 +1,38 @@
-node_modules/
-src/__tests__/**/*
-src/__fixtures__/**/*
-jest.config.js
+# Development and build tools
+*.tsbuildinfo
+tsconfig.json
+rollup.config.js
+vitest.config.mjs
+setupTests.js
 
+# Environment and config files
+.env*
+.vscode/
+.idea/
+*.code-workspace
+
+# Development dependencies
+yarn.lock
+yarn-error.log*
+.yarn-integrity
+
+# Testing and coverage
+coverage/
+.nyc_output/
+
+# Logs
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.yarn-integrity
-package-lock.json
-.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary directories
+.tmp/
+.temp/
+
+# Legacy/outdated
+jest.config.js
 deleteable/
-*.DS_Store

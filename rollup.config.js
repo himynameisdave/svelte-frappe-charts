@@ -1,6 +1,8 @@
 import svelte from 'rollup-plugin-svelte';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
+import sveltePreprocess from 'svelte-preprocess';
 import pkg from './package.json';
 
 
@@ -11,7 +13,7 @@ const name = pkg.name
 
 
 export default {
-  input: 'src/index.js',
+  input: 'src/index.ts',
   output: [
     {
       file: pkg.module,
@@ -20,14 +22,26 @@ export default {
     {
       file: pkg.main,
       'format': 'umd',
-      name
+      name,
+      globals: {
+        'svelte': 'svelte',
+        'frappe-charts': 'frappeCharts'
+      }
     }
   ],
+  external: ['svelte', 'frappe-charts'],
   plugins: [
-    svelte(),
-    resolve({
-      dedupe: ['svelte']
+    svelte({
+      preprocess: sveltePreprocess()
     }),
-    commonjs()
+    resolve({
+      dedupe: ['svelte'],
+      exportConditions: ['svelte']
+    }),
+    commonjs(),
+    typescript({
+      sourceMap: true,
+      tsconfig: './tsconfig.json'
+    })
   ]
 };
