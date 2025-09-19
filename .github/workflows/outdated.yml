@@ -1,5 +1,8 @@
 name: outdated
 on:
+  # Allow manual runs
+  workflow_dispatch:
+  # Run once a week
   schedule:
     - cron:  '0 23 * * 0' # Once a week, Sundays at 11:00PM UTC (3PM PST)
 env:
